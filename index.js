@@ -23,7 +23,7 @@ class BST {
         }
         let currentNode = this.root;
         while(true){
-            if(data < currentNode.data){
+            if(data <= currentNode.data){
                 if(currentNode.left !== null){
                     currentNode = currentNode.left
                 } else {
@@ -74,6 +74,8 @@ bst.insert(37);
 bst.insert(3);
 bst.insert(99);
 bst.insert(22);
-console.log(bst.inOrderRecursive(bst.root))
-console.log(bst.preOrderRecursive(bst.root))
-console.log(bst.postOrderRecursive(bst.root))
+
+module.exports = {
+    BST,
+    BSTObject: bst
+}
