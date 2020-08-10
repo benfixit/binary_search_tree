@@ -17,7 +17,6 @@ function preOrderIterative (node) {
             stack.push(currentNode.left)
         }
     }
-    
 }
 
 preOrderIterative(BSTObject.root)
