@@ -41,14 +41,6 @@ class BST {
         }
     }
 
-    preOrderRecursive(node){
-        if(node !== null){
-            node.show();
-            this.preOrderRecursive(node.left);
-            this.preOrderRecursive(node.right);
-        }
-    }
-
     postOrderRecursive(node){
         if(node !== null){
             this.postOrderRecursive(node.left);
@@ -66,6 +58,8 @@ bst.insert(37);
 bst.insert(3);
 bst.insert(99);
 bst.insert(22);
+bst.insert(2);
+bst.insert(4);
 
 module.exports = {
     BST,
