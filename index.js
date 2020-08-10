@@ -6,7 +6,7 @@ class Node {
     }
 
     show() {
-        return this.data;
+        console.log(this.data);
     }
 }
 
@@ -40,12 +40,40 @@ class BST {
             }
         }
     }
+
+    inOrderRecursive(node){
+        if(node !== null){
+            this.inOrderRecursive(node.left);
+            node.show();
+            this.inOrderRecursive(node.right);
+        }
+    }
+
+    preOrderRecursive(node){
+        if(node !== null){
+            node.show();
+            this.preOrderRecursive(node.left);
+            this.preOrderRecursive(node.right);
+        }
+    }
+
+    postOrderRecursive(node){
+        if(node !== null){
+            this.postOrderRecursive(node.left);
+            this.postOrderRecursive(node.right);
+            node.show();
+        }
+    }
 }
 
 const bst = new BST();
-bst.insert(6);
-bst.insert(4);
-bst.insert(7);
-bst.insert(1);
-bst.insert(5);
-console.log(bst)
+bst.insert(23);
+bst.insert(45);
+bst.insert(16);
+bst.insert(37);
+bst.insert(3);
+bst.insert(99);
+bst.insert(22);
+console.log(bst.inOrderRecursive(bst.root))
+console.log(bst.preOrderRecursive(bst.root))
+console.log(bst.postOrderRecursive(bst.root))
