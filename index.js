@@ -41,14 +41,6 @@ class BST {
         }
     }
 
-    inOrderRecursive(node){
-        if(node !== null){
-            this.inOrderRecursive(node.left);
-            node.show();
-            this.inOrderRecursive(node.right);
-        }
-    }
-
     preOrderRecursive(node){
         if(node !== null){
             node.show();
