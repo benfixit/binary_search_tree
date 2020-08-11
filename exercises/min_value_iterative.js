@@ -5,14 +5,10 @@ function minValueIterative(node) {
         return 0;
     }
     let currentNode = node;
-    while(true){
-        if(currentNode.left){
-            currentNode = currentNode.left
-        } else {
-            break;
-        }
+    while(currentNode.left){
+        currentNode = currentNode.left
     }
-    return currentNode;
+    return currentNode.data;
 }
 
 console.log(minValueIterative(BSTObject.root))
